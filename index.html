@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+
+
+
+
+    <form id="addMovieForm">
+        <label for="title">Назва:</label>
+        <input type="text" id="title" required>
+        <br>
+        <label for="genre">Жанр:</label>
+        <input type="text" id="genre" required>
+        <br>
+        <label for="director">Режисер:</label>
+        <input type="text" id="director" required>
+        <br>
+        <label for="year">Рік:</label>
+        <input type="number" id="year" required>
+        <br>
+        <button type="submit">Додати фільм</button>
+    </form>
+
+
+    <h2>Список фільмів</h2>
+    <button id="refreshMovies">Оновити список</button>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Назва</th>
+                <th>Жанр</th>
+                <th>Режисер</th>
+                <th>Рік</th>
+                <th>Дії</th>
+            </tr>
+        </thead>
+        <tbody id="moviesTableBody">
+        </tbody>
+    </table>
+
+
+
+        <form id="editMovieForm">
+            <input type="hidden" id="editMovieId">
+            <label for="editTitle">Назва:</label>
+            <input type="text" id="editTitle">
+            <br>
+            <label for="editGenre">Жанр:</label>
+            <input type="text" id="editGenre">
+            <br>
+            <label for="editDirector">Режисер:</label>
+            <input type="text" id="editDirector">
+            <br>
+            <label for="editYear">Рік:</label>
+            <input type="number" id="editYear">
+            <br>
+        </form>
+        <button id="closeEditModal">Закрити</button>
+        <button id="saveEdit">Зберегти зміни</button>
+
+
+    <script src="./index.js"></script>
+</body>
+</html>
