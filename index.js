@@ -1,5 +1,5 @@
 
-// API URL
+
 const API_URL = 'Тут має бути апі яке я не знайшов';
 
 
@@ -14,7 +14,7 @@ async function getMovies() {
     }
 }
 
-// Додавання нового фільму (POST)
+
 async function addMovie(movieData) {
     try {
         const response = await fetch(API_URL, {
@@ -36,7 +36,7 @@ async function addMovie(movieData) {
     }
 }
 
-// Оновлення фільму (PUT)
+
 async function updateMovie(id, movieData) {
     try {
         const response = await fetch(`${API_URL}/${id}`, {
@@ -58,7 +58,7 @@ async function updateMovie(id, movieData) {
     }
 }
 
-// Часткове оновлення фільму (PATCH)
+
 async function patchMovie(id, partialData) {
     try {
         const response = await fetch(`${API_URL}/${id}`, {
@@ -87,7 +87,7 @@ async function deleteMovie(id) {
             method: 'DELETE'
         });
         if (response.ok) {
-            getMovies(); // Оновлюємо список фільмів
+            getMovies();
             return true;
         }
         throw new Error('Помилка при видаленні фільму');
@@ -124,7 +124,7 @@ function displayMovies(movies) {
     });
 }
 
-// Відкриття модального вікна для редагування
+
 function openEditModal(movie) {
     document.getElementById('editMovieId').value = movie.id;
     document.getElementById('editTitle').value = movie.title;
